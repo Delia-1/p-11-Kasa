@@ -5,6 +5,8 @@ import App from "./pages/App.jsx";
 import { ErrorPage } from "./ErrorPage.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import "./styles/main.scss";
+
 const router = createBrowserRouter([
   {
     path: "/",
