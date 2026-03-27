@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+import Banner from "../components/homepage/Banner";
 const Homepage = () => {
   return (
     <>
-      <h1>HOMEPAGE</h1>
-      <Link to={`/homepage/housePage`}>voir le logement</Link>
+      <Banner />
+      <NavLink to={`/homepage/housePage`}>voir le logement</NavLink>
     </>
   );
 };
