@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  @include flex-centered;
+  justify-content: space-between;
+  margin-bottom: 1.7em;
+
+  &__image {
+    width: 9rem;
+    flex-shrink: 0;
+  }
+
+  &__nav {
+    @include flex-centered;
+    gap: 1em;
+  }
+
+  &__link {
+    color: $black;
+    font-weight: 500;
+    font-size: 12px;
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}

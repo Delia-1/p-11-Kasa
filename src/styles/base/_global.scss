@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+// es ce que c'est cohérent moderne css3?
+
+body {
+  min-height: 100vh;
+}
+
+// #root {
+//   width: 100%;
+// }
+
+.app-container {
+  margin: 1.2rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p,
+a {
+  font-family: $font-text;
+}
+
+a {
+  text-decoration: none;
+}
