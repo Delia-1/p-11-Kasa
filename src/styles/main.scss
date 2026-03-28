@@ -4,5 +4,8 @@
 @use "./base/reset";
 @use "./base/global";
 
+@use "./pages/homepage";
+
 @use "./components/header";
 @use "./components/banner";
+@use "./components/card";

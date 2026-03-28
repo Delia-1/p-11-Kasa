@@ -3,11 +3,11 @@ import { StrictMode } from "react";
 import App from "./pages/App.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
-import Homepage from "./pages/Homepage.js";
+import Homepage from "./pages/Homepage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./styles/main.scss";
-import HousePage from "./pages/HousePage.js";
+import HousePage from "./pages/HousePage.jsx";
 
 const router = createBrowserRouter([
   {

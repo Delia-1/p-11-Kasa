@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.section-cards {
+  @include flex-centered;
+  justify-content: center;
+  // display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  // display: grid;
+  // grid-template-columns: 1fr;
+  gap: 50px;
+  width: 100%;
+  height: max-content;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
