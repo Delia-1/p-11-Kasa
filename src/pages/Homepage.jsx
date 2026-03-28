@@ -9,7 +9,7 @@ const Homepage = () => {
       <Banner />
       <section className="section-cards">
         {data.map(({ id, title, cover }) => {
-          return <Card key={id} title={title} cover={cover} />;
+          return <Card key={id} id={id} title={title} cover={cover} />;
         })}
       </section>
     </div>
