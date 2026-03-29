@@ -1,4 +1,4 @@
-import Banner from "../components/homepage/Banner";
+import Banner from "../components/Banner";
 import Card from "../components/homepage/Card";
 import mockedData from "../data/mockedData.json";
 const data = mockedData;
