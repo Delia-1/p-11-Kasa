@@ -4,7 +4,7 @@
 .header {
   @include flex-centered;
   justify-content: space-between;
-  margin-bottom: 1.7em;
+  margin: 1.2rem;
 
   &__image {
     width: 9rem;

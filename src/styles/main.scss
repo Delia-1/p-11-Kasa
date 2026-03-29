@@ -1,11 +1,12 @@
 @use "./abstracts/variables";
 @use "./abstracts/mixins";
 
-@use "./base/reset";
 @use "./base/global";
+@use "./base/reset";
 
 @use "./pages/homepage";
 
 @use "./components/header";
+@use "./components/footer";
 @use "./components/banner";
 @use "./components/card";
