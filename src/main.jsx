@@ -13,18 +13,21 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
+    errorElement: <App><ErrorPage /></App>,
     children: [
+      {
+        path: "/homepage",
+        element: <Homepage />,
+      },
       {
         path: "/about",
         element: <AboutPage />,
       },
-      {
-        // Rajouter la rediretion vers le param id du logement
-        path: "/homepage",
-        element: <Homepage />,
-      },
       { path: "/housepages/:housepageId", element: <HousePage /> },
+      {
+        path: "*",
+        element: <ErrorPage />,
+      },
     ],
   },
 ]);

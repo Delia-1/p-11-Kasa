@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.error-page {
+    @include flex-centered;
+    flex-direction: column;
+    padding-top: 5.4em;
+    
+    &__title {
+        font-size: 96px;
+        font-weight: 700;
+        color: $red
+    }
+
+    &__message {
+        margin-top: 5.8em;
+        line-height: 142%;
+        font-size: 18px;
+        font-weight: 500;
+        color: $red;
+        text-align: center;
+    }
+
+    &__link {
+        margin-top: 7em;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: underline;
+        color: $black
+    }
+
+    // br{
+    //     display: none
+    // }
+}
+
+
+// Dand les media query mettre en display none le br

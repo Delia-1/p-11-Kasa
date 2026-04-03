@@ -12,7 +12,7 @@
     @include flex-centered;
     justify-content: center;
     flex-direction: column;
-    width: 36%;
+    width: 32%;
     height: 50%;
   }
 
@@ -27,6 +27,7 @@
     color: $white;
     font-weight: 500;
     font-size: 12px;
+    line-height: 143%;
     text-align: center;
   }
 }
