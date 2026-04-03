@@ -1,10 +1,11 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.banner {
+.banner, .bannerAbout{
   position: relative;
   width: 100%;
   height: 111px;
+  margin-top: 0.8rem;
   border-radius: 10px;
   overflow: hidden;
   background-color: $black;
@@ -35,4 +36,15 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
+}
+
+.bannerAbout {
+margin-top: 0;
+}
+
+.bannerAbout::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
 }
