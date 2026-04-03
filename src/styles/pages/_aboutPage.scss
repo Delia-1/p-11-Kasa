@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.about-container-desktop {
+    @media (min-width: 768px) {
+        @include flex-centered;
+        margin: 0 5rem;
+        flex-direction: column;
+    }
+    
+    .collaps-container {
+        @include flex-centered;
+        width: 82%;
+        flex-direction: column;
+        
+        @media (min-width: 768px) {
+            padding: 37px 0;
+            gap: 1.8em;
+        }
+    }
+}

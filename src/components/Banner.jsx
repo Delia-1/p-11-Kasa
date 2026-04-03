@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 const Banner = () => {
 let location = useLocation()
 
+// utiliser lazy ou suspens pour la banner
 useEffect(() => {
   const banner1 = new Image()
   banner1.src = banner;

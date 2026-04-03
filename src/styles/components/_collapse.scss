@@ -4,6 +4,9 @@
 .collapse {
   margin-top: 20px;
   width: 100%;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .dropdown {
@@ -13,10 +16,18 @@
   padding: 7px 12px;
   border-radius: 5px;
 
+  @media (min-width: 768px) {
+    padding: 11.5px 12px;
+  }
+
   &__title {
     color: $white;
     font-weight: 700;
     font-size: 13px;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   &__trigger {

@@ -8,10 +8,22 @@
   gap: 50px;
   width: 100%;
   height: max-content;
+
+      @media (min-width: 768px) {
+      border: 1px solid $light-grey;
+      background-color: $light-grey;
+      border-radius: 25px;
+      padding: 3.6rem 0;
+      margin-top: 1.8rem;
+      gap: 60px;
+    }
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   gap: 1em;
+      @media (min-width: 768px) {
+      margin: 0 5rem;
+    }
 }
