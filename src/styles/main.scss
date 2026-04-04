@@ -7,9 +7,15 @@
 @use "./pages/homepage";
 @use "./pages/error";
 @use "./pages/aboutPage";
+@use "./pages/housePage";
+
 
 @use "./components/header";
 @use "./components/footer";
 @use "./components/banner";
 @use "./components/card";
 @use "./components/collapse";
+@use "./components/slideshow";
+@use "./components/tag";
+
+

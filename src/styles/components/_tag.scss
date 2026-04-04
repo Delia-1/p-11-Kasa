@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.tag {
+    @include flex-centered;
+    width: 84px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: $red;
+
+    &__text {
+        font-size: 10px;
+        font-weight: 700;
+    }
+}
