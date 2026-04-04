@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.housepage {
+
+    &__tags {
+        @include flex-centered;
+        
+    }
+}
