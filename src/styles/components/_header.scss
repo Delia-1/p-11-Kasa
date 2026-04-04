@@ -21,6 +21,10 @@
   &__nav {
     @include flex-centered;
     gap: 1em;
+
+     @media (min-width: 768px) {
+       gap: 4em
+    }
   }
 
   &__link {

@@ -77,4 +77,8 @@
   font-weight: 400;
   font-size: 12px;
   margin: 0;
+
+      @media (min-width: 768px) {
+      font-size: 18px;
+    }
 }

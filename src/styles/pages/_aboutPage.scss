@@ -2,10 +2,12 @@
 @use "../abstracts/mixins" as *;
 
 .about-container-desktop {
+    @include flex-centered;
+    flex-direction: column;
+    
     @media (min-width: 768px) {
-        @include flex-centered;
         margin: 0 5rem;
-        flex-direction: column;
+        margin-bottom: -1rem;
     }
     
     .collaps-container {
