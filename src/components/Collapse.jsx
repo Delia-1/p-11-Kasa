@@ -1,7 +1,7 @@
 import dropClose from "../assets/dropdown-closed.svg";
 import { useState } from "react";
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, content, equipments, isList= false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -25,7 +25,16 @@ const Collapse = ({ title, content }) => {
       </div>
       <div className={`collapse__content ${isOpen ? "open" : ""}`}>
         <div className="collapse__inner">
-          <p className="collapse__text">{content}</p>
+          {!isList
+          ?  <p className="collapse__text">{content}</p>
+          : (<ul>
+            {equipments.map((equipment, index) => (
+              <li key={`${index}-${equipment}`}>{equipment}</li>
+            ))}
+
+          </ul>)
+          }
+         
         </div>
       </div>
     </article>
