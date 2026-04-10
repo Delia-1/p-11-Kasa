@@ -1,7 +1,8 @@
+import { memo } from "react";
 import dropClose from "../assets/dropdown-closed.svg";
 import { useState } from "react";
 
-const Collapse = ({ title, content, equipments, isList= false }) => {
+const Collapse = memo(({ title, content, equipments, isList = false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -25,18 +26,23 @@ const Collapse = ({ title, content, equipments, isList= false }) => {
       </div>
       <div className={`collapse__content ${isOpen ? "open" : ""}`}>
         <div className="collapse__inner">
-          {!isList
-          ?  <p className="collapse__text">{content}</p>
-          : (<ul className="collapse__list">
-            {equipments.map((equipment, index) => (
-              <li className="collapse__list-item" key={`${index}-${equipment}`}>{equipment}</li>
-            ))}
-
-          </ul>)
-          }
+          {!isList ? (
+            <p className="collapse__text">{content}</p>
+          ) : (
+            <ul className="collapse__list">
+              {equipments.map((equipment, index) => (
+                <li
+                  className="collapse__list-item"
+                  key={`${index}-${equipment}`}
+                >
+                  {equipment}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </article>
   );
-};
-export default Collapse;
+});
+export default memo(Collapse);
