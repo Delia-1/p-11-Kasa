@@ -2,14 +2,19 @@
 @use "../abstracts/mixins" as *;
 
 .tag {
-    @include flex-centered;
-    width: 84px;
-    height: 18px;
-    border-radius: 10px;
-    background-color: $red;
-
-    &__text {
-        font-size: 10px;
-        font-weight: 700;
-    }
+  @include flex-centered;
+  justify-content: center;
+  min-height: 1.14em; 
+  border-radius: 5px;
+  background-color: $red;
+  padding: 0 1.4em;
+  
+  &__text {
+    font-size: 10px;
+    font-weight: 700;
+    color: $white;
+    padding: 0 0.5em;  
+    margin: 0;
+    white-space: nowrap;  
+  }
 }

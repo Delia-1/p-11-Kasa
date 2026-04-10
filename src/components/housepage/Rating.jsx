@@ -1,11 +1,18 @@
 import star from "../../assets/star.svg"
-//via state gerer le nb de star pleine et vide sur toujours tot de 5
-const Rating = ({nbStars}) => {
+import starActive from "../../assets/star-red.svg"
 
-    // console.log("nb stars", nbStars)
+//useMemo pour enregistrer le calcule?
+const Rating = ({nbStars, max = 5}) => { 
+
+let nbst = Number(nbStars)
+
     return (
         <div>
-            <img src={star} alt="" />
+            {Array.from({length: max}).map((_, index) => (
+                 <img key={index} className="star" src={index < nbst ? starActive : star} alt="star" />
+            ))}
+
+        
         </div>
     )
 }
