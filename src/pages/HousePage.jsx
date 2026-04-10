@@ -27,18 +27,19 @@ const {title, description, pictures, tags, rating, location, equipments, host} =
             <Tag key={`${tag}-${index}`} tag={tag}/>
           ))}
         </div>
-        <div>
+        <div className="house-infos">
           <Rating nbStars={rating}/>
-          <div className="housepage__host">
+          <div className="house-infos__host">
             <p className="host-name">{host.name}</p>
             <div className="host-pic-wrapper">
-
-            <img className="host-picture" src={host.picture} alt="host picture" />
+              <img className="host-picture" src={host.picture} alt="host picture" />
             </div>
           </div>
         </div>
-        <Collapse title={"Description"} content={description}/>
-        <Collapse title={"Equipement"} isList={true} equipments={equipments}/>
+        <div className="collapses-section">
+          <Collapse title={"Description"} content={description}/>
+          <Collapse title={"Équipements"} isList={true} equipments={equipments}/>
+        </div>
       </div>
     </>
   );

@@ -27,14 +27,13 @@ const Collapse = ({ title, content, equipments, isList= false }) => {
         <div className="collapse__inner">
           {!isList
           ?  <p className="collapse__text">{content}</p>
-          : (<ul>
+          : (<ul className="collapse__list">
             {equipments.map((equipment, index) => (
-              <li key={`${index}-${equipment}`}>{equipment}</li>
+              <li className="collapse__list-item" key={`${index}-${equipment}`}>{equipment}</li>
             ))}
 
           </ul>)
           }
-         
         </div>
       </div>
     </article>

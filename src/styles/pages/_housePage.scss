@@ -2,9 +2,79 @@
 @use "../abstracts/mixins" as *;
 
 .housepage {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+        @media (min-width: 768px) {
+        margin: 0 5rem;
+        margin-bottom: -1rem;
+    }
+
+
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+        color: $red;
+        line-height: 143%;
+    }
+
+    &__desc {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 143%;
+        margin: 0;
+    }
 
     &__tags {
         @include flex-centered;
-        
+        gap: 0.6em;
+        flex-wrap: wrap;
+
     }
+
+  
+}
+
+
+.house-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5em;
+
+      &__host {
+        @include flex-centered;
+        width: 31%;
+        text-align: end;
+
+        .host-pic-wrapper {
+            position: relative;
+            width: 32px;
+            border-radius: 50%;
+            max-width: 40px;
+            overflow: hidden;
+        }
+        .host-picture {
+            width: 100%;
+            object-fit: cover;
+             display: block;
+        }
+
+        .host-name {
+            font-size: 12px;
+            font-weight: 500;
+            color: $red;
+            line-height: 143%;
+            margin: 0;
+            padding-inline-end: 1em;
+        }
+    }
+
+}
+
+.collapses-section {
+    @include flex-centered;
+    flex-direction: column;
+    gap: 20px;
 }

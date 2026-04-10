@@ -2,11 +2,57 @@
 @use "../abstracts/mixins" as *;
 
 .collapse {
-  margin-top: 20px;
   width: 100%;
-  @media (min-width: 768px) {
-    margin-top: 0;
-  }
+  // @media (min-width: 768px) {
+  //   margin-top: 0;
+  // }
+
+
+&__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  will-change: max-height;
+}
+
+&__inner {
+  background-color: $grey;
+  padding: 10px 20px 19px 20px;
+  border-radius: 0 0 5px 5px;
+
+  transform: translateY(-50px);
+  transition: transform 0.45s ease;
+}
+
+&__content.open {
+  max-height: 500px;
+}
+
+&__content.open &__inner {
+  transform: translateY(0);
+}
+
+&__text {
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+
+      @media (min-width: 768px) {
+      font-size: 18px;
+    }
+}
+&__list {
+  padding: 0;
+}
+
+&__list-item {
+  list-style: none;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+  line-height: 143%
+}
+
 }
 
 .dropdown {
@@ -47,38 +93,4 @@
   &__icon.open {
     transform: rotate(-180deg);
   }
-}
-
-.collapse__content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  will-change: max-height;
-}
-
-.collapse__inner {
-  background-color: $grey;
-  padding: 10px 20px 19px 20px;
-  border-radius: 0 0 5px 5px;
-
-  transform: translateY(-50px);
-  transition: transform 0.45s ease;
-}
-
-.collapse__content.open {
-  max-height: 500px;
-}
-
-.collapse__content.open .collapse__inner {
-  transform: translateY(0);
-}
-
-.collapse__text {
-  font-weight: 400;
-  font-size: 12px;
-  margin: 0;
-
-      @media (min-width: 768px) {
-      font-size: 18px;
-    }
 }

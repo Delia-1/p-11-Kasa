@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.filled {
-    color: $red;
+.rating {
+    display: flex;
+    gap: 0.15em;
 }
