@@ -9,9 +9,9 @@
   overflow: hidden;
   max-width: 340px;
 
-   @media (min-width: 768px) {
+  @media (min-width: 768px) {
     height: 21em;
-   }
+  }
 
   &__image {
     width: 100%;
@@ -29,10 +29,10 @@
     color: $white;
     z-index: 2;
 
-     @media (min-width: 768px) {
+    @media (min-width: 768px) {
       top: 13.5em;
       line-height: 143%;
-     }
+    }
   }
 }
 

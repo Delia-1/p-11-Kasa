@@ -4,17 +4,27 @@
 .tag {
   @include flex-centered;
   justify-content: center;
-  min-height: 1.14em; 
+  min-height: 1.14em;
   border-radius: 5px;
   background-color: $red;
   padding: 0 1.4em;
-  
+
+  @media (min-width: 768px) {
+    padding: 0.1em 1.7em;
+    border-radius: 10px;
+  }
+
   &__text {
     font-size: 10px;
     font-weight: 700;
     color: $white;
-    padding: 0 0.5em;  
+    padding: 0 0.5em;
     margin: 0;
-    white-space: nowrap;  
+    white-space: nowrap;
+    line-height: 143%;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
   }
 }

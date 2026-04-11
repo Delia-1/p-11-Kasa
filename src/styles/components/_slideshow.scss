@@ -2,28 +2,43 @@
 @use "../abstracts/mixins" as *;
 
 .slideshow {
-    width: 335px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 0.5em;
 
-    &__picture {
-         width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
-    }
+  @media (min-width: 768px) {
+    height: 415px;
+  }
 
-    &__nav {
-        @include flex-centered;
-        width: 100%;
-        top: 50%;
-        position: absolute;
-        justify-content: space-between;
-    }
+  &__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-    &__prev-btn, &__next-btn {
-        border: none;
-        background: none;
+  &__nav {
+    @include flex-centered;
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  &__prev-btn,
+  &__next-btn {
+    border: none;
+    background: none;
+  }
+
+  .icon-prev,
+  .icon-next {
+    @media (min-width: 768px) {
+      width: 79px;
     }
+  }
 }

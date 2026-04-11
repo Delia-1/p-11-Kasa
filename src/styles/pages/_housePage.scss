@@ -2,79 +2,130 @@
 @use "../abstracts/mixins" as *;
 
 .housepage {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 
-        @media (min-width: 768px) {
-        margin: 0 5rem;
-        margin-bottom: -1rem;
+  @media (min-width: 768px) {
+    margin: 0 5rem;
+    margin-bottom: -1rem;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    color: $red;
+    line-height: 143%;
+
+    @media (min-width: 768px) {
+      font-size: 36px;
+      margin-top: 0.5em;
     }
+  }
 
+  &__desc {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 143%;
+    margin: 0;
 
-    &__title {
-        font-size: 18px;
-        font-weight: 500;
-        color: $red;
-        line-height: 143%;
+    @media (min-width: 768px) {
+      font-size: 18px;
     }
+  }
 
-    &__desc {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 143%;
-        margin: 0;
+  &__tags {
+    @include flex-centered;
+    gap: 0.6em;
+    flex-wrap: wrap;
+
+    @media (min-width: 768px) {
+      margin-top: 1.5em;
     }
-
-    &__tags {
-        @include flex-centered;
-        gap: 0.6em;
-        flex-wrap: wrap;
-
-    }
-
-  
+  }
 }
 
-
 .house-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+
+  @media (min-width: 768px) {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.5em;
+    flex-direction: column-reverse;
+    width: max-content;
+    align-items: flex-end;
+    margin-top: 1em;
+  }
 
-      &__host {
-        @include flex-centered;
-        width: 31%;
-        text-align: end;
+  &__host {
+    @include flex-centered;
+    width: 31%;
+    text-align: end;
+    gap: 0.5rem;
 
-        .host-pic-wrapper {
-            position: relative;
-            width: 32px;
-            border-radius: 50%;
-            max-width: 40px;
-            overflow: hidden;
-        }
-        .host-picture {
-            width: 100%;
-            object-fit: cover;
-             display: block;
-        }
-
-        .host-name {
-            font-size: 12px;
-            font-weight: 500;
-            color: $red;
-            line-height: 143%;
-            margin: 0;
-            padding-inline-end: 1em;
-        }
+    @media (min-width: 768px) {
+      text-align: center;
+      width: auto;
     }
 
+    .host-pic-wrapper {
+      position: relative;
+      width: 32px;
+      border-radius: 50%;
+      max-width: 40px;
+      overflow: hidden;
+
+      @media (min-width: 768px) {
+        width: 64px;
+        max-width: 70px;
+      }
+    }
+    .host-picture {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .host-name {
+      white-space: pre-line;
+      font-size: 12px;
+      font-weight: 500;
+      color: $red;
+      line-height: 143%;
+      margin: 0;
+
+      @media (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .collapses-section {
-    @include flex-centered;
-    flex-direction: column;
-    gap: 20px;
+  @include flex-centered;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin-top: 1em;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 3em;
+  }
+}
+
+.container-desktop {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.col-right {
+  display: flex;
+  justify-content: flex-end;
 }

@@ -1,9 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
-const d = "delia";
-console.log(d.toUpperCase())
-
 const Header = () => {
   return (
     <header className="header">

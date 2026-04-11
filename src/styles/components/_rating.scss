@@ -2,6 +2,17 @@
 @use "../abstracts/mixins" as *;
 
 .rating {
-    display: flex;
-    gap: 0.15em;
+  display: flex;
+  gap: 0.15em;
+
+  @media (min-width: 768px) {
+    margin-top: 1.5em;
+    gap: 0.2em;
+  }
+
+  .star {
+    @media (min-width: 768px) {
+      width: 36px;
+    }
+  }
 }
