@@ -4,37 +4,38 @@
 .header {
   @include flex-centered;
   justify-content: space-between;
-  margin: 1.2rem;
+  margin: $spacing-xl $spacing-2xl;
 
-      @media (min-width: 768px) {
-      margin: 3.2rem 6rem;
-    }
+  @media (min-width: $breakpoint-tablet) {
+    margin: $spacing-3-5xl $spacing-6xl;
+  }
 
   &__image {
     width: 9rem;
     flex-shrink: 0;
-    @media (min-width: 768px) {
+
+    @media (min-width: $breakpoint-tablet) {
       width: 13rem;
     }
   }
 
   &__nav {
     @include flex-centered;
-    gap: 1em;
+    gap: 1rem;
 
-     @media (min-width: 768px) {
-       gap: 4em
+    @media (min-width: $breakpoint-tablet) {
+      gap: 4rem;
     }
   }
 
   &__link {
     color: $black;
     font-weight: 500;
-    font-size: 12px;
+    font-size: $font-size-xs;
     text-transform: uppercase;
 
-      @media (min-width: 768px) {
-      font-size: 24px;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-lg;
       text-transform: none;
     }
 
