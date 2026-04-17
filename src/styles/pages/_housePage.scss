@@ -111,6 +111,7 @@
   @include flex-centered;
   flex-direction: column;
   gap: $spacing-xl;
+  padding-bottom: $spacing-xl;
 
   @media (min-width: $breakpoint-tablet) {
     flex-direction: row;

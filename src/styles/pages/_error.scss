@@ -4,50 +4,50 @@
 .error-page {
   @include flex-centered;
   flex-direction: column;
-  padding-top: 5.4em;
+  padding-top: $spacing-5xl;
 
-  @media (min-width: 768px) {
-    padding-top: 2.4em;
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: $spacing-xs;
   }
 
   &__title {
-    font-size: 96px;
+    font-size: $font-size-3xl;
     font-weight: 700;
     color: $red;
 
-    @media (min-width: 768px) {
-      font-size: 288px;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-4xl;
     }
 
-    @media (min-width: 1450px) {
+    @media (min-width: $breakpoint-wide) {
       line-height: 70%;
     }
   }
 
   &__message {
-    margin-top: 5.8em;
+    margin-top: $spacing-5xl;
     line-height: 142%;
-    font-size: 18px;
+    font-size: $font-size-md;
     font-weight: 500;
     color: $red;
     text-align: center;
 
-    @media (min-width: 768px) {
-      font-size: 36px;
-      margin-top: 2.5em;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-xl;
+      margin-top: $spacing-4xl;
     }
   }
 
   &__link {
-    margin-top: 7em;
-    font-size: 14px;
+    margin-top: $spacing-6xl;
+    font-size: $font-size-base;
     font-weight: 500;
     text-decoration: underline;
     color: $black;
 
-    @media (min-width: 768px) {
-      font-size: 18px;
-      margin-top: 5.8em;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-md;
+      margin-top: 6.8rem;
     }
   }
 }

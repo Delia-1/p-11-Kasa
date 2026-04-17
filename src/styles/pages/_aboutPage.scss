@@ -2,24 +2,25 @@
 @use "../abstracts/mixins" as *;
 
 .about-container-desktop {
+  @include flex-centered;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: 0 $spacing-5xl;
+    margin-bottom: -1rem;
+  }
+
+  .collapse-container {
     @include flex-centered;
+    width: 100%;
     flex-direction: column;
-    
-    @media (min-width: 768px) {
-        margin: 0 5rem;
-        margin-bottom: -1rem;
+    gap: $spacing-xl;
+    margin-top: $spacing-xl;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: $spacing-3xl 0;
+      gap: $spacing-2-5xl;
+      margin-top: 0;
     }
-    
-    .collaps-container {
-        @include flex-centered;
-        width: 82%;
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 20px;
-        
-        @media (min-width: 768px) {
-            padding: 37px 0;
-            gap: 1.8em;
-        }
-    }
+  }
 }
