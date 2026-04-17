@@ -3,14 +3,14 @@
 
 .slideshow {
   width: 100%;
-  height: auto;
+  height: $card-height-mobile;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
-  margin-top: 0.5em;
+  border-radius: $radius-md;
+  margin-top: $spacing-xs;
 
-  @media (min-width: 768px) {
-    height: 415px;
+  @media (min-width: $breakpoint-tablet) {
+    height: $slideshow-height-desktop;
   }
 
   &__picture {
@@ -22,23 +22,28 @@
 
   &__nav {
     @include flex-centered;
-    width: 100%;
+    width: 102%;
     top: 50%;
     position: absolute;
     justify-content: space-between;
     transform: translateY(-50%);
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 100%;
+    }
   }
 
   &__prev-btn,
   &__next-btn {
     border: none;
     background: none;
+    cursor: pointer;
   }
 
   .icon-prev,
   .icon-next {
-    @media (min-width: 768px) {
-      width: 79px;
+    @media (min-width: $breakpoint-tablet) {
+      width: $spacing-5xl;
     }
   }
 }

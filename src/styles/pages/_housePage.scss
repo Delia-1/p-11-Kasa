@@ -4,84 +4,89 @@
 .housepage {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.5rem;
 
-  @media (min-width: 768px) {
-    margin: 0 5rem;
+  @media (min-width: $breakpoint-tablet) {
+    margin: 0 $spacing-5xl;
     margin-bottom: -1rem;
   }
 
   &__title {
-    font-size: 18px;
+    font-size: $font-size-md;
     font-weight: 500;
     color: $red;
     line-height: 143%;
 
-    @media (min-width: 768px) {
-      font-size: 36px;
-      margin-top: 0.5em;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-xl;
+      margin-top: $spacing-2xl;
     }
   }
 
   &__desc {
-    font-size: 14px;
+    font-size: $font-size-base;
     font-weight: 500;
     line-height: 143%;
-    margin: 0;
+    margin: $spacing-xs 0;
 
-    @media (min-width: 768px) {
-      font-size: 18px;
+    @media (min-width: $breakpoint-tablet) {
+      margin: 0;
+      font-size: $font-size-md;
     }
   }
 
   &__tags {
     @include flex-centered;
-    gap: 0.6em;
+    gap: $spacing-sm;
     flex-wrap: wrap;
+    margin: $spacing-md 0;
 
-    @media (min-width: 768px) {
-      margin-top: 1.5em;
+    @media (min-width: $breakpoint-tablet) {
+      margin: $spacing-xl 0 0 0;
     }
   }
 }
 
 .house-infos {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet) {
     display: flex;
     flex-direction: column-reverse;
     width: max-content;
     align-items: flex-end;
-    margin-top: 1em;
+    margin-top: 1rem;
   }
 
   &__host {
     @include flex-centered;
+    justify-content: flex-end;
     width: 31%;
     text-align: end;
     gap: 0.5rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-tablet) {
       text-align: center;
       width: auto;
     }
 
     .host-pic-wrapper {
       position: relative;
-      width: 32px;
+      width: $spacing-2-5xl;
       border-radius: 50%;
       max-width: 40px;
       overflow: hidden;
 
-      @media (min-width: 768px) {
+      @media (min-width: $breakpoint-tablet) {
         width: 64px;
         max-width: 70px;
       }
     }
+
     .host-picture {
       width: 100%;
       object-fit: cover;
@@ -90,14 +95,13 @@
 
     .host-name {
       white-space: pre-line;
-      font-size: 12px;
+      font-size: $font-size-xs;
       font-weight: 500;
       color: $red;
-      line-height: 143%;
       margin: 0;
 
-      @media (min-width: 768px) {
-        font-size: 18px;
+      @media (min-width: $breakpoint-tablet) {
+        font-size: $font-size-md;
       }
     }
   }
@@ -106,26 +110,31 @@
 .collapses-section {
   @include flex-centered;
   flex-direction: column;
-  gap: 20px;
+  gap: $spacing-xl;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet) {
     flex-direction: row;
-    margin-top: 1em;
+    margin-top: 1rem;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 3em;
+    padding-bottom: $spacing-3-5xl;
+    gap: $spacing-5xl;
   }
 }
 
 .container-desktop {
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet) {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3.5fr 1fr;
     align-items: start;
   }
 }
 
 .col-right {
   display: flex;
-  justify-content: flex-end;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: auto;
+    justify-content: flex-end;
+  }
 }

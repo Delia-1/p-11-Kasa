@@ -3,16 +3,16 @@
 
 .rating {
   display: flex;
-  gap: 0.15em;
+  gap: 0.15rem;
 
-  @media (min-width: 768px) {
-    margin-top: 1.5em;
-    gap: 0.2em;
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: $spacing-2xl;
+    gap: 0.2rem;
   }
 
   .star {
-    @media (min-width: 768px) {
-      width: 36px;
+    @media (min-width: $breakpoint-tablet) {
+      width: $spacing-3xl;
     }
   }
 }

@@ -5,17 +5,17 @@
   @include flex-centered;
   justify-content: center;
   min-height: 1.14em;
-  border-radius: 5px;
+  border-radius: $radius-sm;
   background-color: $red;
   padding: 0 1.4em;
 
-  @media (min-width: 768px) {
-    padding: 0.1em 1.7em;
-    border-radius: 10px;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0.15em 1.7em;
+    border-radius: $radius-md;
   }
 
   &__text {
-    font-size: 10px;
+    font-size: $font-size-xs;
     font-weight: 700;
     color: $white;
     padding: 0 0.5em;
@@ -23,8 +23,8 @@
     white-space: nowrap;
     line-height: 143%;
 
-    @media (min-width: 768px) {
-      font-size: 14px;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-base;
     }
   }
 }

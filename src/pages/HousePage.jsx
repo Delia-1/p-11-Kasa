@@ -64,11 +64,13 @@ const HousePage = () => {
         </div>
         <div className="collapses-section">
           <Collapse
+            housepage
             hasMidTitleDesktop
             title={"Description"}
             content={description}
           />
           <Collapse
+            housepage
             hasMidTitleDesktop
             title={"Équipements"}
             isList={true}

@@ -9,12 +9,13 @@ const Collapse = memo(
     equipments,
     isList = false,
     hasMidTitleDesktop = false,
+    housepage = false,
   }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
       <article className="collapse">
-        <div className="dropdown">
+        <div className={`dropdown${housepage ? "-housepage" : ""}`}>
           <h3
             className={`dropdown__title ${hasMidTitleDesktop ? "mid-desktop" : ""}`}
           >

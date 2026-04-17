@@ -3,8 +3,9 @@
 
 .collapse {
   width: 100%;
-  @media (min-width: 768px) {
-    width: 47%;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 83%;
   }
 
   &__content {
@@ -16,9 +17,8 @@
 
   &__inner {
     background-color: $grey;
-    padding: 10px 20px 19px 20px;
-    border-radius: 0 0 5px 5px;
-
+    padding: $spacing-md $spacing-xl $spacing-lg $spacing-xl;
+    border-radius: 0 0 $radius-sm $radius-sm;
     transform: translateY(-50px);
     transition: transform 0.45s ease;
   }
@@ -33,13 +33,14 @@
 
   &__text {
     font-weight: 400;
-    font-size: 12px;
+    font-size: $font-size-xs;
     margin: 0;
 
-    @media (min-width: 768px) {
-      font-size: 18px;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-md;
     }
   }
+
   &__list {
     padding: 0;
   }
@@ -47,40 +48,41 @@
   &__list-item {
     list-style: none;
     font-weight: 400;
-    font-size: 12px;
+    font-size: $font-size-xs;
     margin: 0;
     line-height: 143%;
 
-    @media (min-width: 768px) {
-      font-size: 18px;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-md;
     }
   }
 }
 
-.dropdown {
+.dropdown,
+.dropdown-housepage {
   @include flex-centered;
   justify-content: space-between;
   background-color: $red;
-  padding: 7px 12px;
-  border-radius: 5px;
+  padding: $spacing-xxs $spacing-md;
+  border-radius: $radius-sm;
 
-  @media (min-width: 768px) {
-    padding: 15px 12px;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0.6rem $spacing-md;
   }
 
   &__title {
     color: $white;
     font-weight: 700;
-    font-size: 13px;
+    font-size: $font-size-sm;
 
-    @media (min-width: 768px) {
-      font-size: 24px;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-lg;
     }
   }
 
   &__title.mid-desktop {
-    @media (min-width: 768px) {
-      font-size: 18px;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: $font-size-md;
     }
   }
 
@@ -91,24 +93,23 @@
     padding: 0;
     cursor: pointer;
     justify-content: center;
-    padding-inline-end: 1em;
+    padding-inline-end: 1rem;
   }
 
   &__icon {
     transition: transform 0.35s ease;
     transform-origin: center;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-tablet) {
       width: 23px;
     }
   }
-
   &__icon.open {
     transform: rotate(-180deg);
   }
 }
-.collapse-mid-title-desktop {
-  .dropdown__title {
-    font-size: 18px;
+.dropdown-housepage {
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0.82rem $spacing-md;
   }
 }
