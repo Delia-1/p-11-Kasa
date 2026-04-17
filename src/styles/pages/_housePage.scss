@@ -118,6 +118,15 @@
     margin-top: 1rem;
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: $spacing-2-5xl;
+    gap: $spacing-2-5xl;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
     padding-bottom: $spacing-3-5xl;
     gap: $spacing-5xl;
   }

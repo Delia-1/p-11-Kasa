@@ -27,20 +27,20 @@
 
   &__title {
     position: absolute;
-    left: 0.8rem;
-    top: 8%;
+    top: 27%;
+    left: 45%;
     font-size: $font-size-lg;
     font-weight: 700;
     color: $white;
     z-index: 2;
     line-height: 103%;
     text-shadow: 1px 1px 2px $black;
+    transform: translate(-50%, -50%);
 
     @media (min-width: $breakpoint-tablet) {
       font-size: $font-size-2xl;
-      text-align: center;
-      left: 22%;
-      top: 14%;
+      width: 80%;
+      top: 28%;
     }
   }
 }

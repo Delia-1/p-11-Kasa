@@ -5,6 +5,9 @@
   width: 100%;
 
   @media (min-width: $breakpoint-tablet) {
+    width: 100%;
+  }
+  @media (min-width: $breakpoint-desktop) {
     width: 83%;
   }
 
@@ -63,7 +66,7 @@
   @include flex-centered;
   justify-content: space-between;
   background-color: $red;
-  padding: $spacing-xxs $spacing-md;
+  padding: $spacing-xxs 0 $spacing-xxs $spacing-sm;
   border-radius: $radius-sm;
 
   @media (min-width: $breakpoint-tablet) {

@@ -7,7 +7,11 @@
   padding-top: $spacing-5xl;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: $spacing-xs;
+    padding-top: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: $spacing-6xl;
   }
 
   &__title {
@@ -19,7 +23,7 @@
       font-size: $font-size-4xl;
     }
 
-    @media (min-width: $breakpoint-wide) {
+    @media (min-width: $breakpoint-desktop) {
       line-height: 70%;
     }
   }
@@ -34,7 +38,11 @@
 
     @media (min-width: $breakpoint-tablet) {
       font-size: $font-size-xl;
-      margin-top: $spacing-4xl;
+      margin-top: $spacing-lg;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-top: $error-message-mt-desktop;
     }
   }
 
@@ -47,6 +55,10 @@
 
     @media (min-width: $breakpoint-tablet) {
       font-size: $font-size-md;
+      margin-top: $spacing-lg;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
       margin-top: 6.8rem;
     }
   }
