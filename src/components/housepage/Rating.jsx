@@ -19,4 +19,4 @@ const Rating = memo(({ nbStars, max = 5 }) => {
   );
 });
 
-export default memo(Rating);
+export default Rating;

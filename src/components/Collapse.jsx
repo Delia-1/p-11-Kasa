@@ -59,4 +59,4 @@ const Collapse = memo(
     );
   },
 );
-export default memo(Collapse);
+export default Collapse;
