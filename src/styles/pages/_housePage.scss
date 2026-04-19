@@ -36,7 +36,7 @@
   }
 
   &__tags {
-    @include flex-centered;
+    @include flex-aligned;
     gap: $spacing-sm;
     flex-wrap: wrap;
     margin: $spacing-md 0;
@@ -48,10 +48,8 @@
 }
 
 .house-infos {
-  display: flex;
+  @include flex-between;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 0.5rem;
 
   @media (min-width: $breakpoint-tablet) {
@@ -63,7 +61,7 @@
   }
 
   &__host {
-    @include flex-centered;
+    @include flex-aligned;
     justify-content: flex-end;
     width: 31%;
     text-align: end;
@@ -88,9 +86,7 @@
     }
 
     .host-picture {
-      width: 100%;
-      object-fit: cover;
-      display: block;
+      @include image-cover;
     }
 
     .host-name {
@@ -108,7 +104,7 @@
 }
 
 .collapses-section {
-  @include flex-centered;
+  @include flex-aligned;
   flex-direction: column;
   gap: $spacing-xl;
   padding-bottom: $spacing-xl;

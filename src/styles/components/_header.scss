@@ -2,8 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .header {
-  @include flex-centered;
-  justify-content: space-between;
+  @include flex-between;
   margin: $spacing-xl $spacing-2xl;
 
   @media (min-width: $breakpoint-tablet) {
@@ -20,7 +19,7 @@
   }
 
   &__nav {
-    @include flex-centered;
+    @include flex-aligned;
     gap: 1rem;
 
     @media (min-width: $breakpoint-tablet) {

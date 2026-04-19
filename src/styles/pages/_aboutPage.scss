@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .about-container-desktop {
-  @include flex-centered;
+  @include flex-aligned;
   flex-direction: column;
 
   @media (min-width: $breakpoint-tablet) {
@@ -11,7 +11,7 @@
   }
 
   .collapse-container {
-    @include flex-centered;
+    @include flex-aligned;
     width: 100%;
     flex-direction: column;
     gap: $spacing-xl;

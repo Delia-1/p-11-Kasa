@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .error-page {
-  @include flex-centered;
+  @include flex-aligned;
   flex-direction: column;
   padding-top: $spacing-5xl;
 

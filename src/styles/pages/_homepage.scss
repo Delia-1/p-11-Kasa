@@ -2,8 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .section-cards {
-  @include flex-centered;
-  justify-content: center;
+  @include flex-center;
   flex-wrap: wrap;
   gap: $spacing-2xl;
   width: 100%;

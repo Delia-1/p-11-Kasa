@@ -2,8 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .tag {
-  @include flex-centered;
-  justify-content: center;
+  @include flex-center;
   min-height: 1.14em;
   border-radius: $radius-sm;
   background-color: $red;

@@ -2,20 +2,22 @@
 @use "../abstracts/mixins" as *;
 
 .footer {
-  @include flex-centered;
-  justify-content: center;
+  @include flex-center;
   width: 100%;
   height: $footer-height-mobile;
   background-color: $black;
 
   &__container {
-    @include flex-centered;
-    justify-content: center;
+    @include flex-center;
     flex-direction: column;
     width: 32%;
     height: 50%;
 
     @media (min-width: $breakpoint-tablet) {
+      width: 50%;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      width: 32%;
       height: 74%;
     }
   }
