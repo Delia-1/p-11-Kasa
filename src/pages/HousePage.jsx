@@ -4,6 +4,7 @@ import Slideshow from "../components/housepage/Slideshow";
 import Collapse from "../components/Collapse";
 import Tag from "../components/housepage/Tag";
 import Rating from "../components/housepage/Rating";
+import { Navigate } from "react-router-dom";
 
 const HousePage = () => {
   const { housepageId } = useParams();
@@ -11,6 +12,8 @@ const HousePage = () => {
   const data = mockedData.find((item) => {
     return item.id === housepageId;
   });
+
+  if (!data) return <Navigate to="/error" replace />;
 
   const {
     title,
@@ -23,13 +26,6 @@ const HousePage = () => {
     host,
   } = data;
 
-  // const tagsList = useMemo(() => {
-  //   return tags.map((tag, index) => (
-  //       <Tag key={`${tag}-${index}`} tag={tag}/>
-  //     )
-  //   )
-  // },[tags])
-
   return (
     <>
       <div className="housepage">
@@ -39,7 +35,6 @@ const HousePage = () => {
             <h2 className="housepage__title">{title}</h2>
             <p className="housepage__desc">{location}</p>
             <div className="housepage__tags">
-              {/* {tagsList} */}
               {tags.map((tag, index) => (
                 <Tag key={`${tag}-${index}`} tag={tag} />
               ))}
@@ -47,7 +42,6 @@ const HousePage = () => {
           </div>
           <div className="col-right">
             <div className="house-infos">
-              {/* {ratingString} */}
               <Rating nbStars={rating} />
               <div className="house-infos__host">
                 <p className="host-name">{host.name.replace(" ", "\n")}</p>

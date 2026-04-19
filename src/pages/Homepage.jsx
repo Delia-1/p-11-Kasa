@@ -7,14 +7,11 @@ const Homepage = () => {
   return (
     <div className="main-container">
       <Banner />
-      {/* <div className="wrapper-desktop"> */}
-
       <section className="section-cards">
         {data.map(({ id, title, cover }) => {
           return <Card key={id} id={id} title={title} cover={cover} />;
         })}
       </section>
-      {/* </div> */}
     </div>
   );
 };
