@@ -12,7 +12,6 @@ function App() {
       <Footer />
     </>
   );
-  //header -> nav
 }
 
 export default App;

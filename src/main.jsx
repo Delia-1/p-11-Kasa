@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { StrictMode } from "react";
 import App from "./pages/App.jsx";
-import ErrorPage from "./ErrorPage.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import Homepage from "./pages/Homepage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -13,7 +13,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <App><ErrorPage /></App>,
+    errorElement: (
+      <App>
+        <ErrorPage />
+      </App>
+    ),
     children: [
       {
         path: "/homepage",
