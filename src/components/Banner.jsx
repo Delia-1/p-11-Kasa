@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import srcBanner from "../assets/banner.svg";
-import srcBannerAbout from "../assets/bannerAbout.svg";
 
 const Banner = () => {
   const location = useLocation();

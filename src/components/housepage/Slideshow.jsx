@@ -43,9 +43,11 @@ const Slideshow = ({ pictures }) => {
           </button>
         </div>
       ) : null}
-      <div className="slideshow__counter-desktop">
-        <p>{`${activeImage + 1}/${pictures.length}`}</p>
-      </div>
+      {!isSingleGallery ? (
+        <div className="slideshow__counter-desktop">
+          <p>{`${activeImage + 1}/${pictures.length}`}</p>
+        </div>
+      ) : null}
     </div>
   );
 };
